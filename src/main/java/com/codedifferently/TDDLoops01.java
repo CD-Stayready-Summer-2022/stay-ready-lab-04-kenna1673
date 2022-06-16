@@ -20,20 +20,36 @@ public class TDDLoops01 {
         return output;
     }
 
+    // output the numbers 1 - 25 squared in the same format as before
     public String squares(){
-        return "";
+        String output = "squares()\n"
+                +"*** Output ***";
+        for (int i = 1; i <= 5; i++) {
+            int iSquared = i * i;
+            output += "\n" + iSquared;
+        }
+        return output;
     }
 
-    public String random4(){
-        return "";
-    }
-
+    // take in the value of n and decide if it is even
     public String even(int n){
-        return "";
+        String nIsEven = "n is even";
+        String nIsNotEven = "n is not even";
+        if ((n % 2) == 0) {
+            return nIsEven;
+        }
+        return nIsNotEven;
     }
 
+    // output the numbers 1 - 100 to the power of n
     public String powers(int n){
-        return "";
+        String output = "powers()\n"
+                +"*** Output ***";
+        for (int i = 1; i <= 10; i++) {
+            int iToPowerOfN = (int) Math.pow(i, n);
+            output += "\n" + iToPowerOfN;
+        }
+        return output;
     }
 
 }

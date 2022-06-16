@@ -14,7 +14,7 @@ public class TDDLoops01Test {
         String actual = numbers.oneToTen();
 
         //: Then
-        Assertions.assertEquals("The two strings are equal", expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -27,42 +27,39 @@ public class TDDLoops01Test {
         String actual = numbers.oddNumbers();
         //: Then
 
-        Assertions.assertEquals("The two strings are equal",expected,actual);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
     public void squaresTest(){
         //: Given
-
+        TDDLoops01 loops = new TDDLoops01();
+        String expected = "squares()\n*** Output ***\n1\n4\n9\n16\n25";
         //: When
-
+        String actual = loops.squares();
         //: Then
-    }
-
-    @Test
-    public void random4Test(){
-        //: Given
-
-        //: When
-
-        //: Then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void evenTest(){
         //: Given
-
+        TDDLoops01 loops = new TDDLoops01();
+        String expected = "n is even";
         //: When
-
+        String actual = loops.even(4);
         //: Then
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void powersTest(){
         //: Given
-
+        TDDLoops01 loops = new TDDLoops01();
+        String expected = "powers()\n*** Output ***\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10";
         //: When
-
+        String actual = loops.powers(1);
         //: Then
+        Assertions.assertEquals(expected, actual);
     }
 }

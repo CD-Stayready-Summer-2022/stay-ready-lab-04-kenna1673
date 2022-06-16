@@ -28,6 +28,30 @@ public class WuBuzz {
      */
 
     public String wuTangClan(int n){
-        return null;
+        String wu = "Wu";
+        String tang = "Tang";
+        String wuTangForever = "WuTang Forever";
+        String output = "";
+        for (int i = 1; i <= n; i++) {
+            if (multipleOfThree(i) && multipleOfFive(i)) {
+                output  += wuTangForever;
+            } else if (multipleOfThree(i)) {
+                output += wu;
+            } else if (multipleOfFive(i)) {
+                output += tang;
+            } else {
+                output += i;
+            }
+            output += "\n";
+        }
+        return output;
+    }
+
+    public boolean multipleOfThree(int n) {
+        return (n % 3) == 0;
+    }
+
+    public boolean multipleOfFive(int n) {
+        return (n % 5) == 0;
     }
 }
